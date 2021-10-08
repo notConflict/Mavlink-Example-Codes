@@ -19,9 +19,9 @@ def mavlink_loop(conn, callbacks):
 	while not exit_var:
 		conn.mav.heartbeat_send(mavutil.mavlink.MAV_TYPE_ONBOARD_CONTROLLER,
 								mavutil.mavlink.MAV_AUTOPILOT_GENERIC,
-								0,
-								0,
-								0)
+								250,
+								450,
+								50)
 
 		m = conn.recv_match(type=interesting_messages, timeout=1, blocking=True)
 
