@@ -13,8 +13,8 @@ print("Connection success")
 def attitude_data(veh):
 	while True:
 		print("R: {0}, P: {1}, Y: {2}".format(degrees(veh.attitude.roll),
-										degrees(veh.attitude.pitch),
-										degrees(veh.attitude.yaw)))
+										#degrees(veh.attitude.pitch),
+										#degrees(veh.attitude.yaw)))
 
 thread_attitude = th.Thread(target=attitude_data, args=(vehicle,))
 thread_attitude.start()
