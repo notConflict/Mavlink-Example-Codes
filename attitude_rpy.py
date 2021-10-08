@@ -26,11 +26,11 @@ print("Connecting to flight controller...")
 
 vehicle = mavutil.mavlink_connection(
     '/dev/ttyACM0',
-    autoreconnect = True,
+    autoreconnect = False,
     source_system = 1,
-    source_component = 93,
-    baud=115200,
-    force_connected=True,
+    source_component = 20,
+    baud=57600,
+    force_connected= False,
 )
 
 print("Successfull connect flight controller...")
