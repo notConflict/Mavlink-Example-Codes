@@ -1,4 +1,5 @@
 import time
+import math as m
 from pymavlink import mavutil
 from dronekit import connect
 
@@ -20,7 +21,7 @@ def att_msg_callback(value):
     global heading_north_yaw
     if heading_north_yaw is None:
         heading_north_yaw = value.yaw
-        print("INFO: Received first ATTITUDE message with heading yaw %.2f degrees" % heading_north_yaw)
+        print("INFO: Received first ATTITUDE message with heading yaw %.2f degrees" % m.degrees(heading_north_yaw))
 
 
 print("Connecting to flight controller...")
