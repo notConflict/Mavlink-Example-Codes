@@ -4,7 +4,7 @@ from math import degrees
 from dronekit import connect
 
 connection_string 	= '/dev/ttyACM0'
-connection_baud 	= 115200
+connection_baud 	= 9600
 
 print("Waiting connection...")
 vehicle = connect(connection_string, baud=connection_baud, wait_ready=False)
