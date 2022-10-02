@@ -27,11 +27,11 @@ def att_msg_callback(value):
 print("Connecting to flight controller...")
 
 vehicle = mavutil.mavlink_connection(
-    '/dev/ttyACM0',
+    '/dev/ttyACM',
     autoreconnect = True,
     source_system = 1,
     source_component = 93,
-    baud=115200,
+    baud=9600,
     force_connected=True,
 )
 
