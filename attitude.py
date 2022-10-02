@@ -52,8 +52,8 @@ mavlink_callbacks = {
 	'ATTITUDE': att_msg_callback,
 }
 
-# mavlink_thread = threading.Thread(target=mavlink_loop, args=(vehicle, mavlink_callbacks))
-# mavlink_thread.start()
+# mavlink_thread = threading.Thread(target=mavlink_loop, args=(vehicle, mavlink_callbacks), 1)
+# mavlink_thread.start(true)
 
 print("Start listening data")
 
