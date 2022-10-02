@@ -22,6 +22,7 @@ def stop_call(signum, frame):
 sig.signal(sig.SIGINT, close_call)
 sig.signal(sig.SIGTERM, terminate_call)
 sig.signal(sig.SIGTSTP, stop_call)
+sig.signal(sig.SIGTSTP, resume_call)
 
 sig.alarm(3)
 print('Current alarm:', time.ctime())  
